@@ -1,21 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tareano3;
 
-/**
- *
- * @author usuario
- */
+import java.util.Scanner;
+
 public class TareaNo3 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner s = new Scanner(System.in);
+        int opcion = 0;
+
+        System.out.println("            Tarea No. 3        ");
+        System.out.println("            201403578        ");
+
+        System.out.println("1. Usuarios");
+        System.out.println("2. Palabras Palíndromas");
+        System.out.println("3. Salir");
+        System.out.println("Escoge un opción: ");
+        opcion = s.nextInt();
+
+        switch (opcion) {
+
+            case 1: {
+
+                Usuarios usuario = new Usuarios();
+                usuario.Menu();
+            }
+            break;
+        }
+
     }
-    
+
 }
