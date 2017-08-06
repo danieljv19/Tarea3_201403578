@@ -5,13 +5,12 @@ import javax.swing.JOptionPane;
 
 public class Usuarios {
 
-public static String []usuarios = new String[5];
+    public static String[] usuarios = new String[5];
 
     public Usuarios() {
 
         int menu = 0;
         Scanner sc = new Scanner(System.in);
-         
 
     }
 
@@ -29,51 +28,53 @@ public static String []usuarios = new String[5];
         System.out.println("Escoge un opción: ");
         menu = sc.nextInt();
 
-        while (salir) {
-            switch (menu) {
+        switch (menu) {
 
-                case 1: {
+            case 1: {
 
-                    for (int i = 0; i < usuarios.length; i++) {
+                for (int i = 0; i < usuarios.length; i++) {
 
-                        usuarios[i] = JOptionPane.showInputDialog(null, "Ingresa un usuario: ");
+                    usuarios[i] = JOptionPane.showInputDialog(null, "Ingresa un usuario: ");
 
+                }
+
+            }
+            break;
+
+            case 2: {
+
+                int cont = 1;
+                for (int j = 0; j < usuarios.length; j++) {
+
+                    System.out.println(cont + ". " + usuarios[j]);
+                    cont++;
+                }
+            }
+            break;
+
+            case 3: {
+
+                int resultado=-1;
+                int cont=0;
+                for(String buscar: usuarios){
+                    if(usuarios[cont].equals(JOptionPane.showInputDialog("Ingresa un nombre: "))){
+                        resultado=cont;
                     }
-                    
+                    cont++;
                 }
-                break;
-
-                case 2: {
-
-                   int cont=1;
-                   for(int j=0; j<usuarios.length;j++){
-                      
-                       System.out.println(cont+". "+usuarios[j]);
-                       cont++;
-                   }
-                }
-                break;
-
-                case 3: {
-
-                    for(int k=0;k<usuarios.length;k++){
-                    JOptionPane.showInputDialog("Ingresa un nombre");
-                    
             }
-                }
-                break;
-                case 4: {
-
-                }
-                break;
-                case 5: {
-
-                    salir = false;
-                }
-                break;
+            break;
+            case 4: {
+                //MENÚ PRINCIPAL PENDIENTE
             }
+            break;
+            case 5: {
 
+                salir = false;
+            }
+            break;
         }
+
     }
 
 }
