@@ -54,14 +54,15 @@ public class Usuarios {
 
             case 3: {
 
-                int resultado=-1;
-                int cont=0;
-                for(String buscar: usuarios){
-                    if(usuarios[cont].equals(JOptionPane.showInputDialog("Ingresa un nombre: "))){
-                        resultado=cont;
+                for(int x=0;x<usuarios.length;x++){
+                    if(JOptionPane.showInputDialog("Buscar nombre: ")==usuarios[x]){
+                        JOptionPane.showInternalMessageDialog(null, usuarios[x]);
+                    }else{
+                        JOptionPane.showInternalMessageDialog(null, "ERROR!! No existe ningún usuario con esa coincidencia");
                     }
-                    cont++;
                 }
+                
+                
             }
             break;
             case 4: {
