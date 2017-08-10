@@ -41,7 +41,7 @@ public class TareaNo3 {
                             break;
                         }
                     }
-                    JOptionPane.showMessageDialog(null, cont == 1 ? "La palabra es palídroma " : "La palabra no es palíndroma");
+                    System.out.println(cont == 1 ? "La palabra es palídroma " : "La palabra no es palíndroma");
 
                 }
                 break;
